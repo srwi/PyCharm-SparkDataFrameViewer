@@ -38,7 +38,7 @@ class ViewSparkDataFrame : AnAction() {
                     val expression = buildExpression(variableName)
                     val pandasValue = Python.evaluateExpression(value.frameAccessor, expression)
                     SwingUtilities.invokeLater {
-                        openDataViewer(project, pandasValue)
+                        PyDataView.getInstance(project).show(pandasValue)
                     }
                 } catch (e: InterruptedException) {
                     // Operation cancelled by user
@@ -92,32 +92,6 @@ class ViewSparkDataFrame : AnAction() {
             "$variableName.toPandas()"
         }
         return expression
-    }
-
-    fun openDataViewer(project: Project, pandasValue: PyDebugValue) {
-        val settings = SparkDataFrameViewerSettingsState.instance
-
-        when (settings.viewTarget) {
-            SparkDataFrameViewerSettingsState.ViewTarget.DEFAULT -> {
-                PyDataView.getInstance(project).show(pandasValue)
-            }
-
-            SparkDataFrameViewerSettingsState.ViewTarget.TOOL_WINDOW -> {
-                val toolWindowManager = ToolWindowManager.getInstance(project)
-                var toolWindow = toolWindowManager.getToolWindow(TOOL_WINDOW_NAME)
-                if (toolWindow == null) {
-                    toolWindow = toolWindowManager.registerToolWindow(
-                        RegisterToolWindowTask(id = TOOL_WINDOW_NAME, canCloseContent = true)
-                    )
-                    PyDataView.getInstance(project).init(toolWindow)
-                }
-                PyDataView.getInstance(project).show(pandasValue)
-            }
-
-            SparkDataFrameViewerSettingsState.ViewTarget.DIALOG -> {
-                PyDataViewDialog(project, pandasValue).show()
-            }
-        }
     }
 
     private fun getExpression(value: PyDebugValue): String {

@@ -7,17 +7,8 @@ import com.intellij.openapi.components.Storage
 
 @State(name = "SparkDataFrameViewerSettings", storages = [Storage("SparkDataFrameViewerSettings.xml")])
 class SparkDataFrameViewerSettingsState : PersistentStateComponent<SparkDataFrameViewerSettingsState> {
-    enum class ViewTarget(val displayName: String) {
-        DEFAULT("Default"),
-        TOOL_WINDOW("Tool window"),
-        DIALOG("Dialog");
-
-        override fun toString(): String = displayName
-    }
-
     var applyLimit: Boolean = true
     var queryLimit: Int = 50
-    var viewTarget: ViewTarget = ViewTarget.DEFAULT
 
     override fun getState(): SparkDataFrameViewerSettingsState {
         return this
@@ -26,7 +17,6 @@ class SparkDataFrameViewerSettingsState : PersistentStateComponent<SparkDataFram
     override fun loadState(state: SparkDataFrameViewerSettingsState) {
         this.applyLimit = state.applyLimit
         this.queryLimit = state.queryLimit.coerceAtLeast(1)
-        this.viewTarget = state.viewTarget
     }
 
     companion object {
