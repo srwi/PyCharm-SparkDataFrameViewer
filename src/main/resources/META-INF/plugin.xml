@@ -1,0 +1,29 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <id>com.github.srwi.sparkdataframeviewer</id>
+    <name>Spark DataFrame Viewer</name>
+    <vendor>srwi</vendor>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.python</depends>
+    <depends>com.intellij.platform.images</depends>
+
+    <actions>
+        <action id="ViewPandasDataFrameAction" class="com.github.srwi.sparkdataframeviewer.actions.ViewSparkDataFrame" text="View Spark DataFrame">
+            <add-to-group group-id="XDebugger.ValueGroup" anchor="before" relative-to-action="PyDebugger.ViewArray"/>
+            <mouse-shortcut keymap="$default" keystroke="button2"/>
+        </action>
+    </actions>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <notificationGroup id="notificationGroup.error" displayType="BALLOON" />
+        <notificationGroup id="notificationGroup.sticky" displayType="STICKY_BALLOON" />
+        <applicationService
+                serviceImplementation="com.github.srwi.sparkdataframeviewer.settings.SparkDataFrameViewerSettingsState"/>
+        <applicationConfigurable parentId="tools" instance="com.github.srwi.sparkdataframeviewer.settings.SparkDataFrameViewerSettingsConfigurable" displayName="Spark DataFrame Viewer"/>
+    </extensions>
+
+    <applicationListeners>
+        <listener class="com.github.srwi.sparkdataframeviewer.listeners.PluginActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
+    </applicationListeners>
+</idea-plugin>
