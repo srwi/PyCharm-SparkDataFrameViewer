@@ -60,7 +60,7 @@ internal class PluginActivationListener : ApplicationActivationListener {
             NotificationType.INFORMATION
         )
         notification.addAction(NotificationAction.createSimple("Rate") {
-            val url = "https://plugins.jetbrains.com/plugin/25039-pixellens/reviews"
+            val url = "https://plugins.jetbrains.com/vendor/stephan-rumswinkel"
             Desktop.getDesktop().browse(URI(url))
         })
         notification.addAction(NotificationAction.createSimple("Star on GitHub") {

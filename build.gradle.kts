@@ -68,10 +68,8 @@ intellijPlatform {
                 if (!containsAll(listOf(start, end))) {
                     throw GradleException("Plugin description section not found in README.md:\n$start ... $end")
                 }
-                val shortDescription = "Easily view a Spark DataFrame from the debugger."
-                val longDescription = subList(indexOf(start) + 1, indexOf(end)).joinToString("\n")
-                val fullDescription = "$shortDescription\n\n --- \n\n# Spark DataFrame Viewer for PyCharm\n\n$longDescription"
-                fullDescription.let(::markdownToHTML)
+                val desc = subList(indexOf(start) + 1, indexOf(end)).joinToString("\n")
+                desc.let(::markdownToHTML)
             }
         }
 

@@ -1,19 +1,19 @@
-# Spark DataFrame Viewer
+# Spark DataFrame Viewer <img src="src/main/resources/META-INF/pluginIcon.svg" align="right" width="25%"/>
 
 <a href="https://paypal.me/rumswinkel"><img src="https://img.shields.io/static/v1?label=Donate&message=%E2%9D%A4&logo=PayPal&color=%23009cde"/></a>
-[![Version](https://img.shields.io/jetbrains/plugin/v/25039-pixellens.svg)](https://plugins.jetbrains.com/plugin/25039-pixellens)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/25039-pixellens.svg)](https://plugins.jetbrains.com/plugin/25039-pixellens)
 
 <!-- Plugin description -->
-[Spark DataFrameViewer]() lets you inspect Spark DataFrames directly in PyCharm. In the debugger, right-click a variable and select <kbd>View Spark DataFrame</kbd> to open the data in PyCharm's built-in DataFrame viewer.
+[Spark DataFrameViewer](https://github.com/srwi/PyCharm-SparkDataFrameViewer) lets you inspect Spark DataFrames directly in PyCharm.
 
-Its functionality is straightforward: it executes the Spark query, applies a configurable row limit, converts the result to a pandas DataFrame via <code>.toPandas()</code>, and displays it in PyCharm's DataFrame viewer.
+In the debugger, right-click a variable and select <kbd>View Spark DataFrame</kbd> to open the data in PyCharm's built-in DataFrame viewer.
+
+The plugin works by executing your Spark query with a configurable row limit, converting the result to a pandas DataFrame using <code>.toPandas()</code>, and displaying it in PyCharm's DataFrame viewer.
 
 <!-- Plugin description end -->
 
 ## Installation
 
-- Get it from the [JetBrain Marketplace](https://plugins.jetbrains.com/plugin/25039-pixellens)
+- Get it from the [JetBrain Marketplace]()
 
 - Using the IDE built-in plugin system:
   
@@ -21,9 +21,9 @@ Its functionality is straightforward: it executes the Spark query, applies a con
   
 - Manually:
 
-  Download the [latest release](https://github.com/srwi/PyCharm-PixelLens/releases/latest) and install it manually using
+  Download the [latest release](https://github.com/srwi/PyCharm-SparkDataFrameViewer/releases/latest) and install it manually using
   <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
 
 ## License
 
-This project is licensed under the [GPLv3](https://github.com/srwi/PyCharm-PixelLens/blob/master/LICENSE) license.
+This project is licensed under the [MIT](https://github.com/srwi/PyCharm-SparkDataFrameViewer/blob/master/LICENSE) license.
