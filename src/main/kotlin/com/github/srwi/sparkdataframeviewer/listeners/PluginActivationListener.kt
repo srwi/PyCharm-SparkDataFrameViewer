@@ -60,7 +60,7 @@ internal class PluginActivationListener : ApplicationActivationListener {
             NotificationType.INFORMATION
         )
         notification.addAction(NotificationAction.createSimple("Rate") {
-            val url = "https://plugins.jetbrains.com/vendor/stephan-rumswinkel"
+            val url = "https://plugins.jetbrains.com/plugin/28448-spark-dataframe-viewer"
             Desktop.getDesktop().browse(URI(url))
         })
         notification.addAction(NotificationAction.createSimple("Star on GitHub") {

@@ -1,6 +1,8 @@
 # Spark DataFrame Viewer <img src="src/main/resources/META-INF/pluginIcon.svg" align="right" width="25%"/>
 
 <a href="https://paypal.me/rumswinkel"><img src="https://img.shields.io/static/v1?label=Donate&message=%E2%9D%A4&logo=PayPal&color=%23009cde"/></a>
+[![Version](https://img.shields.io/jetbrains/plugin/v/28448-spark-dataframe-viewer.svg)](https://plugins.jetbrains.com/plugin/28448-spark-dataframe-viewer)
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/28448-spark-dataframe-viewer.svg)](https://plugins.jetbrains.com/plugin/28448-spark-dataframe-viewer)
 
 <!-- Plugin description -->
 [Spark DataFrame Viewer](https://github.com/srwi/PyCharm-SparkDataFrameViewer) lets you inspect Spark DataFrames directly in PyCharm.
@@ -13,7 +15,7 @@ The plugin works by executing your Spark query with a configurable row limit, co
 
 ## Installation
 
-- Get it from the [JetBrain Marketplace]()
+- Get it from the [JetBrain Marketplace](https://plugins.jetbrains.com/plugin/28448-spark-dataframe-viewer)
 
 - Using the IDE built-in plugin system:
   
