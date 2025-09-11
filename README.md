@@ -3,7 +3,7 @@
 <a href="https://paypal.me/rumswinkel"><img src="https://img.shields.io/static/v1?label=Donate&message=%E2%9D%A4&logo=PayPal&color=%23009cde"/></a>
 
 <!-- Plugin description -->
-[Spark DataFrameViewer](https://github.com/srwi/PyCharm-SparkDataFrameViewer) lets you inspect Spark DataFrames directly in PyCharm.
+[Spark DataFrame Viewer](https://github.com/srwi/PyCharm-SparkDataFrameViewer) lets you inspect Spark DataFrames directly in PyCharm.
 
 In the debugger, right-click a variable and select <kbd>View Spark DataFrame</kbd> to open the data in PyCharm's built-in DataFrame viewer.
 

@@ -9,7 +9,10 @@
     <depends>com.intellij.platform.images</depends>
 
     <actions>
-        <action id="ViewPandasDataFrameAction" class="com.github.srwi.sparkdataframeviewer.actions.ViewSparkDataFrame" text="View Spark DataFrame">
+        <action id="ViewPandasDataFrameAction"
+                class="com.github.srwi.sparkdataframeviewer.actions.ViewSparkDataFrame"
+                text="View Spark DataFrame"
+                icon="com.github.srwi.sparkdataframeviewer.icons.DataFrameViewerIcons.Action">
             <add-to-group group-id="XDebugger.ValueGroup" anchor="before" relative-to-action="PyDebugger.ViewArray"/>
             <mouse-shortcut keymap="$default" keystroke="button2"/>
         </action>

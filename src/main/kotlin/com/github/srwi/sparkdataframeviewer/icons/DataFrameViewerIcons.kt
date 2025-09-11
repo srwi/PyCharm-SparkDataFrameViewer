@@ -6,5 +6,5 @@ object DataFrameViewerIcons {
     @JvmField
     val Heart = IconLoader.getIcon("/icons/heart.svg", javaClass)
     @JvmField
-    val ToolWindow = IconLoader.getIcon("/icons/tool_window.svg", javaClass)
+    val Action = IconLoader.getIcon("/icons/action.svg", javaClass)
 }
