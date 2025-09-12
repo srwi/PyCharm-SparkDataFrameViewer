@@ -13,6 +13,10 @@ The plugin works by executing your Spark query with a configurable row limit, co
 
 <!-- Plugin description end -->
 
+<p align="center">
+  <img width="60%" alt="Spark DataFrame Viewer Screenshot" src="https://github.com/user-attachments/assets/ca2884c9-2e4f-4015-b35a-d3adee680dec" />
+</p>
+
 ## Installation
 
 - Get it from the [JetBrain Marketplace](https://plugins.jetbrains.com/plugin/28448-spark-dataframe-viewer)
